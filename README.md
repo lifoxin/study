@@ -1,20 +1,19 @@
-
 # git 的基本使用
 
 ```
-* mkdir tt && cd tt
+ mkdir tt && cd tt
 
-* git clone git@gitlab.inin88.com:foxin.li/python.git
+ git clone git@gitlab.inin88.com:foxin.li/python.git
 
-* git checkout -b fix/bug
+ git checkout -b fix/bug
 
-* git add .
+ git add .
 
-* git commit -m "change what things"
+ git commit -m "change what things"
 
-* git merge fix/bug origin
+ git merge fix/bug origin
 
-* git push origin master
+ git push origin master
 ```
 
 
