@@ -1,7 +1,7 @@
 
-
 # git 的基本使用
 
+```
 * mkdir tt && cd tt
 
 * git clone git@gitlab.inin88.com:foxin.li/python.git
@@ -15,6 +15,7 @@
 * git merge fix/bug origin
 
 * git push origin master
+```
 
 
 # 本项目用于测试
