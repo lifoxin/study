@@ -1,4 +1,20 @@
-# git 的基本使用
+## git 的基本使用
+
+# 上传到gitlab用户
+
+* 生成密钥 
+
+ssh-keygen
+
+* 把 id_rsa.pub 的公钥上传到用户的密钥管理即可
+
+# 生成全局配置
+
+```
+git config --global user.name "xxx"
+git config --global user.email "xxx@xx"
+```
+# 下载gitlab项目
 
 ```
  mkdir tt && cd tt
@@ -21,4 +37,5 @@
 
 ```
 rand_name 是用于随机名字的python脚本
+其他是不同的脚本
 ```
