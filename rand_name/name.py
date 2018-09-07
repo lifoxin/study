@@ -30,8 +30,7 @@ if __name__ == "__main__":
     while True:
          Boyname()   
          Girlname()
-         q= input()
-         if q == 'q':
+         if input("---------------任意键继续,q退出:") == 'q':
             break
             
 
