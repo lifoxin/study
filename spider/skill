@@ -1,0 +1,56 @@
+ 
+  爬虫小练：
+	  scrapy shell https://gitee.com/lifoxin/events
+	  response.xpath('//div[@class="follow-num"]/text()').extract()[3].strip()
+
+ 		
+		scrapy shell http://wjpk3.gxso.net/
+		tree = response.xpath('//*[@id="side"]/div[6]')
+		tree.xpath('.//li/text()').extract()
+
+         from selenium.webdriver import Firefox
+	 url = 'https://yuba.doouyu.com/group/33372'
+	 d = Firefox()
+ 	 d.get(url)
+ 	 d.find_element_by_class_name('img_box-mediaMSM-Zz6gt').click()
+	 url1 = d.find_element_by_class_name('media_view-currentImg-1UeZf').get_attribute('src')
+	 r = requests.get(url1)
+  	 r.ok
+ 	 with open('jl.jpg','bw') as f:
+		f.write(r.content)
+
+
+	scrapy shell https://www.zbj.com/
+        //div[@class="slick-track"]/li[@class="slick-slide"][1]//img/@src
+
+        
+	import requests
+	from lxml import etree
+	url = 'https://jobs.51job.com/shenzhen-nsq/101545728.html?s=01&t=0'
+	r = requests.get(url)
+	r.encoding = r.apparent_encoding
+	html = r.text
+	tree = etree.HTML(html)
+	title = tree.xpath('//div[@class="cn"]/h1/text()')
+	content = tree.xpath('//div[@class="bmsg job_msg inbox"]/p/text()')
+	addr = tree.xpath('//div[@class="bmsg inbox"]/p[@class="fp"]/text()')[1].strip()
+------------
+ 使用不同数据库
+python manage.py migrate --database secondary
+
+drop database django;
+create database django default charset=utf8
+ 
+grant all on student.* to 'orm'@localhost identified by 'orm';
+
+select * from app2_record\G;
+
+---------
+ cd -  返回上一次路径
+
+ set nonu  鼠标复制
+ %edit ， set paste ，再插入i ， 再粘贴
+ 
+ 年份大于2010的，按年份从大到小，名字从大到小排序
+ [print(book) for book in Book.objects.filter(year__gt=2010).order_by('-year','-author')]
+
