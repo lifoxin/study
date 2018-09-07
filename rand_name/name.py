@@ -15,20 +15,23 @@ boyname = "".join(boyname)
 girlname = girlname.replace("\n","").split("、")
 girlname = "".join(girlname)
 
-num = random.randint(1,2)
-
 def Boyname():
-   # name =  random.choice(firstname) + "".join(random.choice(boyname) for i in range(2))
     num = random.randint(1,2)
-    name = "李" + "".join(random.choice(boyname) for i in range(num))
+    name =  random.choice(firstname) + "".join(random.choice(boyname) for i in range(num))
+    #name = "李" + "".join(random.choice(boyname) for i in range(num))
     print(name)
 
 def Girlname():
+    num = random.randint(1,2)
     name = random.choice(firstname) + "".join(random.choice(girlname) for i in range(num))
     print(name)
 
 if __name__ == "__main__":
-    
-    Boyname()   
-    Girlname()
-   
+    while True:
+         Boyname()   
+         Girlname()
+         q= input()
+         if q == 'q':
+            break
+            
+
