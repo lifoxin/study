@@ -2,6 +2,8 @@
 
 import mysql.connector
 
+#mysql-connector 连接数据库
+
 #mydb = mysql.connector.connect(     #连接数据库
 #        host='localhost',
 #        user="felix",
