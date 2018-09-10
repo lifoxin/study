@@ -19,18 +19,18 @@ def Boyname():
     num = random.randint(1,2)
     name =  random.choice(firstname) + "".join(random.choice(boyname) for i in range(num))
     #name = "李" + "".join(random.choice(boyname) for i in range(num))
-    print(name)
+    print('男孩:{0}'.format(name))
 
 def Girlname():
     num = random.randint(1,2)
     name = random.choice(firstname) + "".join(random.choice(girlname) for i in range(num))
-    print(name)
+    print('女孩:{0}'.format(name))
 
 if __name__ == "__main__":
     while True:
          Boyname()   
          Girlname()
-         if input("---------------任意键继续,q退出:") == 'q':
+         if input("---------------Enter继续,Q+Enter退出:") == 'q':
             break
             
 
