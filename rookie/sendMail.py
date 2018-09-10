@@ -29,7 +29,7 @@ def send_mail(to_list,sub,content):
 
 if __name__ == '__main__':
     
-    mailto_list=["805986238@qq.com","18344589481"]
+    mailto_list=["805986238@qq.com","18344589481@qq.com"]
     sub="来了就是深圳人"
     content="窗前明月光"
  
