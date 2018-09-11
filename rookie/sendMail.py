@@ -30,8 +30,8 @@ def send_mail(to_list,sub,content):
 if __name__ == '__main__':
     
     mailto_list=["szwjpk@vip.qq.com"]
-    sub="来了就是深圳人"
-    content="好好学习，天天向上"
+    sub="中秋节快乐"
+    content="国庆节快乐！"
  
     if send_mail(mailto_list,sub,content):  
         print("发送成功")  
