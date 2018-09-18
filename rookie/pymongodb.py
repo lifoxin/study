@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
+import json
 import pymongo
+
 #使用pymongo.MongoClient对象连接数据库
 myclient = pymongo.MongoClient("mongodb://localhost:27017")
 #创建数据库
@@ -8,16 +10,29 @@ mydb = myclient["rookie"]
 #创建集合（数据表）
 mycol = mydb["site2"]
 #准备字典类型的列表内容
-mylist = [
-    {"_id":1,"name":"shanghai","color":"red"},
-    {"_id":2,"name":"beijing","color":"white"},
-    {"_id":3,"name":"guangzhou","color":"black"},
-    {"_id":4,"name":"shenzhen","color":"green"},
-    {"_id":5,"name":"hangzhou","color":"yellow"}
-]
-#插入数据
-#x = mycol.insert_many(mylist)
+#mylist = [
+#    {"_id":1,"name":"shanghai","color":"red"},
+#    {"_id":2,"name":"beijing","color":"white"},
+#    {"_id":3,"name":"guangzhou","color":"black"},
+#    {"_id":4,"name":"shenzhen","color":"green"},
+#    {"_id":5,"name":"hangzhou","color":"yellow"}
+#]
 
+#导入全国地址名的json文件
+with open('dizhi.json') as f:
+    data = json.load(f)
+    f.close()
+list = []
+dict={}
+for k,v in data.items():
+    dict[k]=v
+    new_dict=dict.copy()
+    list.append(new_dict)
+##插入数据
+#mycol.insert_many(list)
+
+#查找导入地址的列表
+print(list[5])
 #判断数据库存在
 #dblist = myclient.database_names()
 #if "rookie" in dblist:
