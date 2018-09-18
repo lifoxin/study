@@ -2,7 +2,9 @@
 
 import smtplib  
 from email.mime.text import MIMEText  
- 
+'''
+这是一个发送邮箱的脚本测试,只是试一下
+'''
 mailto_list=[] 
 mail_host="smtp.163.com:25" 
 mail_user="18344589481@163.com" 
@@ -31,7 +33,9 @@ if __name__ == '__main__':
     
     mailto_list=["szwjpk@vip.qq.com"]
     sub="中秋节快乐"
-    content="国庆节快乐！"
+    with open('sendMail.py') as f:
+        content = f.read()
+   # content="国庆节快乐！"
  
     if send_mail(mailto_list,sub,content):  
         print("发送成功")  
