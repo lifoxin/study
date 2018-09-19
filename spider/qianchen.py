@@ -35,7 +35,7 @@ def fetch(url):
 def store(data):
     with open('job.json','a') as f:
         data = json.dumps(data,ensure_ascii=False)
-        f.write(data + '\n')
+        f.write(data + '\n\n')
         f.close()
 
 if __name__ == '__main__':
