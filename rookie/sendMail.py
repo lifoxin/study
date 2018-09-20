@@ -32,8 +32,8 @@ def send_mail(to_list,sub,content):
 if __name__ == '__main__':
     
     mailto_list=["szwjpk@vip.qq.com"]
-    sub="中秋节快乐"
-    with open('sendMail.py') as f:
+    sub="在做程序员的道路上，你掌握了什么概念或技术使你感觉自我提升突发猛进"
+    with open('lizhi.json') as f:
         content = f.read()
    # content="国庆节快乐！"
  
