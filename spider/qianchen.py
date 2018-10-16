@@ -39,6 +39,8 @@ def fetch(url):  #根据招聘网页的详细信息，整理成一个字典
     title = tree.xpath('//div[@class="cn"]/h1/@title')
     require = tree.xpath('//div[@class="bmsg job_msg inbox"]/p/text()')
     addr = tree.xpath('/html/body/div[3]/div[2]/div[3]/div[2]/div/p/text()') # 因为有的招聘的地址列表没有第二项，所有就全选了
+    if len(addr) >= 2:
+        addr = addr[1].strip()
     my_dict = {'title':title,'company':company,'money':money,'require':require,'addr':addr}
     return my_dict
 
@@ -49,7 +51,7 @@ def store(data):  #把收集好的字典以json的格式添加到文件中
         f.close()
 
 if __name__ == '__main__':
-    base_url = "https://search.51job.com/list/040000,000000,0000,00,9,99,%25E8%25BF%2590%25E7%25BB%25B4%25E5%25B7%25A5%25E7%25A8%258B%25E5%25B8%2588,2,1.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare="
+    base_url = "https://search.51job.com/list/040000,000000,0000,00,9,99,%25E8%25BF%2590%25E7%25BB%25B4%25E5%25B7%25A5%25E7%25A8%258B%25E5%25B8%2588,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare=h"
     count = 1
     urls = geturl(base_url)
     for url in urls:
