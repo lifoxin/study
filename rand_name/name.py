@@ -18,7 +18,6 @@ girlname = "".join(girlname)
 def Boyname():
     num = random.randint(1,2)
     name =  random.choice(firstname) + "".join(random.choice(boyname) for i in range(num))
-    #name = "李" + "".join(random.choice(boyname) for i in range(num))
     print('男孩:{0}'.format(name))
 
 def Girlname():
