@@ -41,6 +41,12 @@ def fetch(url):  #根据招聘网页的详细信息，整理成一个字典
     addr = tree.xpath('/html/body/div[3]/div[2]/div[3]/div[2]/div/p/text()') # 因为有的招聘的地址列表没有第二项，所有就全选了
     if len(addr) >= 2:
         addr = addr[1].strip()
+    if len(company) >= 1:
+        company = company[0].strip()
+    if len(money) >= 1:
+        money = money[0].strip()
+    if len(title) >= 1:
+        title = title[0].strip()
     my_dict = {'title':title,'company':company,'money':money,'require':require,'addr':addr}
     return my_dict
 
