@@ -31,7 +31,7 @@ def send_mail(to_list,sub,content):
 
 if __name__ == '__main__':
     
-    mailto_list=["805986238@qq.com","381407211@qq.com"]
+    mailto_list=["805986238@qq.com"]
     sub="常见的运维工作有哪些"
     with open('/tmp/yulu.text') as f:
         content = f.read()
