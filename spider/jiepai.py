@@ -8,9 +8,7 @@ from hashlib import md5
 from multiprocessing.pool import Pool
 
 '''
-街拍，希望你能读懂。
 使用多进程池pool爬取数据，由页面滚动,发现ajax请求的后续链接的参数offset在变化，所以只要传offset参数就可以构成新url。
-
 '''
 def get_page(offset):
     params = {
