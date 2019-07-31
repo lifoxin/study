@@ -27,7 +27,7 @@ def Girlname():
 
 if __name__ == "__main__":
     while True:
-         Boyname()   
+       	 Boyname()   
          Girlname()
          if input("---------------Enter继续,Q+Enter退出:") == 'q':
             break
