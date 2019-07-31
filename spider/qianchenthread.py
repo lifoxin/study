@@ -55,6 +55,7 @@ class QianChenSpider(Thread):
                     title = title[0].strip()
                 my_dict = {'title':title,'company':company,'money':money,'require':require,'addr':addr}
                 print(my_dict)
+                print()	
             except:
                 print("url:%s爬虫失败"%url)
 
@@ -73,7 +74,7 @@ def main():
     q = queue.Queue()
     #保存线程
     Thread_list = []
-    base_url = "https://search.51job.com/list/040000,040300,0000,00,9,99,%25E8%25BF%2590%25E7%25BB%25B4%25E5%25B7%25A5%25E7%25A8%258B%25E5%25B8%2588,2,1.html?lang=c&stype=1&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=17&dibiaoid=0&address=&line=&specialarea=00&from=&welfare="
+    base_url = "https://search.51job.com/list/040000,040300,0000,00,9,99,%25E8%25BF%2590%25E7%25BB%25B4%25E5%25B7%25A5%25E7%25A8%258B%25E5%25B8%2588,2,1.html"
     urls = nexturl(base_url) + [base_url]
     #创建并启动线程
     for url in urls:
