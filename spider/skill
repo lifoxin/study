@@ -46,7 +46,6 @@ grant all on student.* to 'orm'@localhost identified by 'orm';
 select * from app2_record\G;
 
 ---------
- cd -  返回上一次路径
 
  set nonu  鼠标复制
  %edit ， set paste ，再插入i ， 再粘贴
