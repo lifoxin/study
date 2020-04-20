@@ -7,7 +7,8 @@ def main():
 
 	d1 = datetime.datetime(2019,11,18)
 	now = datetime.datetime.now()
-	print((now-d1).days)
+	a = (now-d1).days
+	print("我和珊珊认识有 {} 天了!".format(a))
 
 if __name__ == "__main__":
 
