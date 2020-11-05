@@ -1,0 +1,12 @@
+{
+	"server":"0.0.0.0",
+	"local_address":"127.0.0.1",
+	"local_port":1234,
+	"port_password":{
+	"6534":"ilovechina6534",
+	"6535":"ilovechina6534"
+	},
+	"timeout":300,
+	"method":"rc4-md5",
+	"fast_open":false
+}
