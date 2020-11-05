@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ip=$(grep parse /tmp/shadowsock.log |tail -n 20 | awk '{print $12}' | sed 's/:.*//g' | uniq -c | awk '{print $2}')
+
+for ip in $ip
+do
+sudo iptables -I INPUT -s $ip -j DROP
+done
+
+sudo iptables-save
+
