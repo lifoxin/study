@@ -19,7 +19,7 @@ git config --global user.name "xxx"
 git config --global user.email "xxx@xx"
 ```
 
-**下载gitlab项目**
+**下载github项目**
 
 ```
  mkdir tt && cd tt
@@ -47,4 +47,5 @@ rookie 是菜鸟学习的脚本
 script 也是7788的脚本
 socket 是tcp/udp访问请求
 spider 爬虫脚本
+ss 是ss的守护进程
 ```
