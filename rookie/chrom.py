@@ -10,7 +10,7 @@ def main():
 	file1 = open('www.txt')  #打开文件
 	str1 = file1.read()      #读取文件
 	#索引出要打开的网站
-	str2 = re.findall(r'weixin.oa.com/yard_deploy/view/ticket/EX-\d+-\d+',str1)
+	str2 = re.findall(r'xxx.com/EX-\d+-\d+',str1)
 
 	#打开网站
 	for url in str2:
